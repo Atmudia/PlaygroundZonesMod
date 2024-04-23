@@ -1,0 +1,6 @@
+/bin/*
+.idea/*
+/obj/*
+/Unity/*
+Folder.DotSettings.user
+packages/*
