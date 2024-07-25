@@ -16,19 +16,6 @@ namespace PlaygroundZonesMod.Cells
                 colliders.gameObject.SetActive(false);
             }
             cellRuinsVR.GetComponent<CellDirector>().AddDroneMapping("PlaygroundZonesMod.cellRuinsVR.json");
-            // manifestResourceStream = ExecAssembly.GetManifestResourceStream("PlaygroundZonesMod.cellRuinsVR.json");
-            // using (StreamReader streamReader = new StreamReader(manifestResourceStream))
-            // {
-            //     string text = streamReader.ReadToEnd();
-            //     JsonObject jsonObject = (JsonObject)JsonValue.Parse(text);
-            //     DroneNetworkUtils.CreateNodesFromJson(cellDirector, jsonObject, true);
-            //     DroneNetwork component = cellDirector.GetComponent<DroneNetwork>();
-            //     component.whitelistConnections = new List<Pather.NodePair>();
-            //     component.blacklistConnections = new List<Pather.NodePair>();
-            //     RanchCellFastForwarder ranchCellFastForwarder = cellRuinsVR.AddComponent<RanchCellFastForwarder>();
-            //     ranchCellFastForwarder.director = zoneVR.GetComponent<IdDirector>();
-            //     ranchCellFastForwarder.director.persistenceDict.Add(ranchCellFastForwarder, ModdedStringRegistry.ClaimID("ranch", "cellRuinsVR"));
-            // }
             cellRuinsVR.GetComponent<Region>().bounds = new Bounds()
             {
                 extents = new Vector3(178.2f, 198.5f, 148.5f),

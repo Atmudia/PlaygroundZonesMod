@@ -34,24 +34,23 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <PropertyGroup>
-      <PostBuildEvent>cp "/data/Modding/SlimeRancher/SR1/PlaygroundZonesMod/bin/Debug/PlaygroundZonesMod.dll" "/data/SteamLibrary/steamapps/common/Slime Rancher/SRML/Mods/"</PostBuildEvent>
+      <PostBuildEvent>cp "/data/Modding/SlimeRancher/SR1/PlaygroundZonesMod/bin/Debug/PlaygroundZonesMod.dll" "/home/komik/.local/share/Steam/steamapps/common/Slime Rancher/SRML/Mods/"</PostBuildEvent>
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="0Harmony">
-          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Slime Rancher\SRML\Libs\0Harmony.dll</HintPath>
+          <HintPath>/home/komik/.local/share/Steam/steamapps/common/Slime Rancher/SRML\Libs\0Harmony.dll</HintPath>
         </Reference>
         <Reference Include="Assembly-CSharp">
-          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\Assembly-CSharp_old-nstrip.dll</HintPath>
+          <HintPath>..\BetterBuildPublic\Builds\BetterBuild\Assembly-CSharp-Publicized.dll</HintPath>
         </Reference>
         <Reference Include="AssetsLib">
-          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Slime Rancher\SRML\Mods\AssetsLib.dll</HintPath>
+          <HintPath>/home/komik/.local/share/Steam/steamapps/common/Slime Rancher/SRML\Mods\AssetsLib.dll</HintPath>
         </Reference>
-        <Reference Include="mscorlib" />
         <Reference Include="Newtonsoft.Json">
-          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Slime Rancher\SRML\Libs\Newtonsoft.Json.dll</HintPath>
+          <HintPath>/home/komik/.local/share/Steam/steamapps/common/Slime Rancher/SRML\Libs\Newtonsoft.Json.dll</HintPath>
         </Reference>
         <Reference Include="SRML">
-          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\SRML.dll</HintPath>
+          <HintPath>/home/komik/.local/share/Steam/steamapps/common/Slime Rancher/SlimeRancher_Data\Managed\SRML.dll</HintPath>
         </Reference>
         <Reference Include="System" />
         <Reference Include="System.Core" />
@@ -61,19 +60,25 @@
         </Reference>
         <Reference Include="System.Xml" />
         <Reference Include="UnityEngine.AnimationModule">
-          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+          <HintPath>/home/komik/.local/share/Steam/steamapps/common/Slime Rancher/SlimeRancher_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.AssetBundleModule">
-          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+          <HintPath>/home/komik/.local/share/Steam/steamapps/common/Slime Rancher/SlimeRancher_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.CoreModule">
-          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+          <HintPath>/home/komik/.local/share/Steam/steamapps/common/Slime Rancher/SlimeRancher_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.InputLegacyModule">
+          <HintPath>/home/komik/.local/share/Steam/steamapps/common/Slime Rancher/SlimeRancher_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.InputModule">
+          <HintPath>/home/komik/.local/share/Steam/steamapps/common/Slime Rancher/SlimeRancher_Data\Managed\UnityEngine.InputModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.PhysicsModule">
           <HintPath>..\BetterBuildPublic\Builds\BetterBuild\UnityEngine.PhysicsModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.UI">
-          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.UI.dll</HintPath>
+          <HintPath>/home/komik/.local/share/Steam/steamapps/common/Slime Rancher/SlimeRancher_Data\Managed\UnityEngine.UI.dll</HintPath>
         </Reference>
     </ItemGroup>
     <ItemGroup>
@@ -86,6 +91,7 @@
         <Compile Include="Enums.cs" />
         <Compile Include="Patches\Patch_AccessDoorUI.cs" />
         <Compile Include="Patches\Patch_BarrierController.cs" />
+        <Compile Include="Patches\Patch_CellDirector.cs" />
         <Compile Include="Patches\Patch_DynamicObjectContainer.cs" />
         <Compile Include="Patches\Patch_RegionRegistry.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />

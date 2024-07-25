@@ -16,9 +16,6 @@ namespace PlaygroundZonesMod.Cells
         public static void Initialize()
         {
             var cellTitleVR = EntryPoint.AssetBundle.LoadAsset<GameObject>("zoneVRTITLE").transform.Find("cellTitleVR").gameObject.InstantiateInactive(new Vector3(189.7642f, 7.5488f, -381.8974f), Quaternion.Euler(0f, 90f, 0), GameObject.Find("zoneRANCH").transform, true);
-            // cellTitleVR.transform.Find("Sector/Cliffs/valley_MochiGate (2)").GetComponent<Replacer>().whatIsThisCollider = -1;
-            
-            // cellTitleVR.transform.Find("Sector/Cliffs/valley_MochiGate (2)")
             cellTitleVR.GetComponent<Region>().bounds = new Bounds()
             {
                 center = new Vector3(210.0617f, 28.5839f, -386.0507f),
@@ -27,9 +24,6 @@ namespace PlaygroundZonesMod.Cells
             cellTitleVR.transform.Find("Sector/objTeleportREEF").CreateTeleport("cellReefVR01", "cellReefVR02", SRObjects.Get<Sprite>("iconZoneReef"), isFormedBefore: true);
             cellTitleVR.transform.Find("Sector/objTeleportMOSS").CreateTeleport("cellMossVR01", "cellMossVR02", SRObjects.Get<Sprite>("iconZoneMoss"), isFormedBefore: true);
             cellTitleVR.transform.Find("Sector/objTeleportRUINS").CreateTeleport("cellRuinsVR01", "cellRuinsVR02", SRObjects.Get<Sprite>("iconZoneRuins"), isFormedBefore: true);
-
-            // AccessDoorUI
-
             var techDoorExpansion = GameObject.Find("zoneRANCH/cellRanch_PassageLab/Sector/Ranch Features/techDoorExpansion").Instantiate(new Vector3(202.8642f, 15.0474f, -382.7335f), Quaternion.identity, cellTitleVR.transform.Find("Sector/Ranch Features")); 
             techDoorExpansion.RemoveComponentImmediate<LabAccessDoor>();
             

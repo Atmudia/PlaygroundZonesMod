@@ -19,7 +19,10 @@ namespace PlaygroundZonesMod.Patches
         {
             if (setId != Enums.VRZONE_SETID)
                 return;
-            Sea ??= GameObject.Find("zoneSEA").transform.Find("Sea").gameObject;
+            
+            if (!Sea || Sea is null)
+                Sea = GameObject.Find("zoneSEA").transform.Find("Sea").gameObject;
+            // Sea ??= 
             Sea.SetActive(true);
         }
     }

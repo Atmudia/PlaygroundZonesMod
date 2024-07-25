@@ -72,5 +72,19 @@ namespace PlaygroundZonesMod.Utils
         }
         internal static Dictionary<string, Mesh> additionalMeshes = new Dictionary<string, Mesh>();
         internal static Dictionary<string, Material> additionalMaterials = new Dictionary<string, Material>();
+        public static string GetFullPath(this GameObject gameObject)
+        {
+            string path =  gameObject.name;
+            Transform current = gameObject.transform;
+
+            while (current.parent != null)
+            {
+                current = current.parent;
+                path = "/" + current.name + path;
+            }
+
+            return path;
+        }
+
     }
 }

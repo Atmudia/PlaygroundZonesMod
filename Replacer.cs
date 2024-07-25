@@ -29,8 +29,7 @@ namespace PlaygroundZonesMod
 		}
 		private static Material GetAnyMaterial(string materialName)
 		{
-			bool flag = SRObjects.additionalMaterials.TryGetValue(materialName, out var material);
-			if (flag)
+			if (SRObjects.additionalMaterials.TryGetValue(materialName, out var material))
 				return material;
 			material = SRObjects.Get<Material>(materialName);
 			if (material != null) return material;
