@@ -37,7 +37,6 @@ namespace PlaygroundZonesMod
         public static Dictionary<string, List<Vector3>> GadgetSiteMappings;
         public static Assembly ExecAssembly;
         public static Sprite IconVRZone;
-
         public static Shader[] beforeAssetBundleShaders;
 
         public override void PreLoad()

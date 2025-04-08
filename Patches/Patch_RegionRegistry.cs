@@ -22,7 +22,6 @@ namespace PlaygroundZonesMod.Patches
             
             if (!Sea || Sea is null)
                 Sea = GameObject.Find("zoneSEA").transform.Find("Sea").gameObject;
-            // Sea ??= 
             Sea.SetActive(true);
         }
     }

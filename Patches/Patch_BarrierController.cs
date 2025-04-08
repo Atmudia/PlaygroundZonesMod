@@ -11,7 +11,7 @@ namespace PlaygroundZonesMod.Patches
         public static void SetIsOpen(BarrierController __instance, bool isOpen)
         {
             var vrAccessDoor = __instance.GetComponentInParent<VRAccessDoor>();
-            if (vrAccessDoor == null)
+            if (!vrAccessDoor)
                 return;
             vrAccessDoor.realBarrier.GetComponent<BoxCollider>().enabled = !isOpen;
 

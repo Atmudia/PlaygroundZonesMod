@@ -34,7 +34,7 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <PropertyGroup>
-      <PostBuildEvent>cp "/data/Modding/SlimeRancher/SR1/PlaygroundZonesMod/bin/Debug/PlaygroundZonesMod.dll" "/home/komik/.local/share/Steam/steamapps/common/Slime Rancher/SRML/Mods/"</PostBuildEvent>
+      <PostBuildEvent>cp "/mnt/HDD/Modding/SlimeRancher/SR1/PlaygroundZonesMod/bin/Debug/PlaygroundZonesMod.dll" "/home/ati/.local/share/Steam/steamapps/common/Slime Rancher/SRML/Mods/"</PostBuildEvent>
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="0Harmony">
@@ -93,6 +93,7 @@
         <Compile Include="Patches\Patch_BarrierController.cs" />
         <Compile Include="Patches\Patch_CellDirector.cs" />
         <Compile Include="Patches\Patch_DynamicObjectContainer.cs" />
+        <Compile Include="Patches\Patch_MusicDirector.cs" />
         <Compile Include="Patches\Patch_RegionRegistry.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Replacer.cs" />
